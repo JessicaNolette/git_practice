@@ -1,0 +1,9 @@
+# Finding the median of a list using statistics
+
+import statistics
+
+def median(import_list):
+  median = statistics.median(import_list)
+  return(median)
+
+print(median([1.00, 5.00, 10.00]))

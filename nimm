@@ -1,0 +1,48 @@
+"""
+File: nimm.py
+-------------------------
+Add your comments here.
+"""
+
+import random
+stones = 20
+random.randint(0,20)
+
+
+def main():
+    print("There are", stones, "stones left")
+    answer = int(input("Player 1 would you like to remove 1 or 2 stones? "))
+    # check to make sure input is valid
+    while answer < 1 or answer > 2:
+        answer = int(input("Please enter 1 or 2: "))
+    print()
+    stones_left = stones - answer
+    # loops the game
+    for i in range(20):
+        print("There are", stones_left, "stones left")
+        answer2 = int(input("Player 2 would you like to remove 1 or 2 stones? "))
+        while answer2 < 1 or answer2 > 2:
+            answer2 = int(input("Please enter 1 or 2: "))
+        print()
+        stones_left = stones_left - answer2
+        # congratulate player 1
+        if stones_left <= 0:
+            print("Player 1 wins!")
+            break
+        print("There are", stones_left, "stones left")
+        answer = int(input("Player 1 would you like to remove 1 or 2 stones? "))
+        while answer < 1 or answer > 2:
+            answer = int(input("Please enter 1 or 2: "))
+        print()
+        stones_left = stones_left - answer
+        # congratulate player 2
+        if stones_left <= 0:
+            print("Player 2 wins!")
+            break
+
+
+
+# This provided line is required at the end of a Python file
+# to call the main() function.
+if __name__ == '__main__':
+    main()

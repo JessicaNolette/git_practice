@@ -1,0 +1,20 @@
+import random
+
+NUM_RANDOM = 10             #input how many random numbers generated for output
+MIN_RANDOM = 0              #input the min number generated
+MAX_RANDOM = 100            #input the max number generated (inclusive)
+
+
+
+def main():
+    for i in range(NUM_RANDOM):
+        print(random.randint(MIN_RANDOM, MAX_RANDOM))
+
+
+
+
+
+# This provided line is required at the end of a Python file
+# to call the main() function.
+if __name__ == '__main__':
+    main()

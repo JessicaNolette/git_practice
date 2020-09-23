@@ -1,0 +1,47 @@
+"""
+File: khansole_academy.py
+-------------------------
+Add your comments here.
+"""
+import random
+
+numb1 = (random.randint(10,99))          # creates a random number in a range
+numb2 = (random.randint(10,99))
+
+
+def main():
+    score = 0  # variable to keep score
+    totalQuestions = 0  # variable to count the questions
+    while totalQuestions <= 1:              # Loop for the quiz
+        numb1 = random.randint(10, 99)
+        numb2 = random.randint(10, 99)
+        correct_answer = numb1 + numb2
+        # ask user a math question
+        print("What is " + str(numb1) + " + " + str(numb2) + " ? ")    # convert string to integer
+        user_answer = int(input("Your answer: "))
+        # check if the answer is correct
+        if user_answer == correct_answer:
+            score = score + 1
+            print("Correct! You've gotten" ,score , "in a row correct!")
+            # user must get three answers correct keep asking questions
+            if score == 3:
+                print("Congratulations! You mastered addition!")
+                break
+        else:
+            score = 0
+            print("Incorrect. The expected answer is " + str(correct_answer))
+
+def introcuction():
+    # Intro: Welcome to Khan-Sole Academy Math Quiz
+    print("Welcome to J-No Academy Math Quiz!")
+    # blank line
+    print("")
+    # Quiz Instructions
+    print("Solve 3 consecutive addition problems in a row, and you win!")
+    print("")
+
+
+# This provided line is required at the end of a Python file
+# to call the main() function.
+if __name__ == '__main__':
+    main()
